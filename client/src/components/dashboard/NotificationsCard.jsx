@@ -65,13 +65,13 @@ const NotificationsCard = ({ notifications, onNotificationClick }) => {
                           </Badge>
                         )}
                       </div>
-                      <p className="text-sm text-gray-600 mt-1">
+                      <p className="text-sm text-start text-gray-600 mt-1">
                         Tagged by {notification.messageId?.userId?.name}
                       </p>
-                      <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+                      <p className="text-xs text-start text-gray-500 mt-1 line-clamp-2">
                         {notification.messageId?.content}
                       </p>
-                      <p className="text-xs text-gray-400 mt-2">
+                      <p className="text-xs text-start text-gray-400 mt-2">
                         {formatTimeAgo(notification.createdAt)}
                       </p>
                     </div>

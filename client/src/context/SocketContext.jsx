@@ -46,44 +46,44 @@ export const SocketProvider = ({ children }) => {
     newSocket.on("connect", () => {
       console.log("Connected to server");
       setConnected(true);
-      toast({
-        title: "Connected",
-        description: "Real-time features are now active",
-        variant: "success",
-        duration: 3000,
-      });
+      // toast({
+      //   title: "Connected",
+      //   description: "Real-time features are now active",
+      //   variant: "success",
+      //   duration: 3000,
+      // });
     });
 
     newSocket.on("disconnect", () => {
       console.log("Disconnected from server");
       setConnected(false);
-      toast({
-        title: "Disconnected",
-        description: "Connection lost. Trying to reconnect...",
-        variant: "warning",
-        duration: 3000,
-      });
+      // toast({
+      //   title: "Disconnected",
+      //   description: "Connection lost. Trying to reconnect...",
+      //   variant: "warning",
+      //   duration: 3000,
+      // });
     });
 
     newSocket.on("connect_error", (error) => {
       console.error("Socket connection error:", error);
-      toast({
-        title: "Connection Error",
-        description: "Failed to connect to real-time services",
-        variant: "destructive",
-        duration: 5000,
-      });
+      // toast({
+      //   title: "Connection Error",
+      //   description: "Failed to connect to real-time services",
+      //   variant: "destructive",
+      //   duration: 5000,
+      // });
     });
 
     newSocket.on("user_tagged", (data) => {
       const { notification, candidate } = data;
 
-      toast({
-        title: "You were tagged!",
-        description: `Tagged in ${candidate.name}'s notes`,
-        variant: "default",
-        duration: 5000,
-      });
+      // toast({
+      //   title: "You were tagged!",
+      //   description: `Tagged in ${candidate.name}'s notes`,
+      //   variant: "default",
+      //   duration: 5000,
+      // });
 
       setNotifications((prev) => [notification, ...prev]);
     });

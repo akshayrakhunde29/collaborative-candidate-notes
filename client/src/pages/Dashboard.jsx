@@ -90,7 +90,7 @@ const Dashboard = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen w-100 bg-gray-50">
         <Header />
         <div className="flex items-center justify-center h-64">
           <LoadingSpinner />
@@ -100,7 +100,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen w-full bg-gray-50">
       <Header
         onNotificationsClick={() => setShowNotifications(!showNotifications)}
       />

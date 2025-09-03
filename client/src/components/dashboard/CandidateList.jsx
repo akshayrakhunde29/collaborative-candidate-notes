@@ -55,7 +55,7 @@ const CandidateList = ({ candidates, onCandidateCreated, onCandidateClick }) => 
           </div>
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
-              <Button>
+              <Button className="text-white">
                 <Plus className="w-4 h-4 mr-2" />
                 Add Candidate
               </Button>
@@ -99,7 +99,7 @@ const CandidateList = ({ candidates, onCandidateCreated, onCandidateClick }) => 
                   >
                     Cancel
                   </Button>
-                  <Button type="submit" disabled={loading}>
+                  <Button className="text-white" type="submit" disabled={loading}>
                     {loading ? <LoadingSpinner size="sm" /> : 'Create Candidate'}
                   </Button>
                 </div>
@@ -133,7 +133,7 @@ const CandidateList = ({ candidates, onCandidateCreated, onCandidateClick }) => 
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate">
+                      <p className="text-sm text-start font-medium text-gray-900 truncate">
                         {candidate.name}
                       </p>
                       <div className="flex items-center text-sm text-gray-500">

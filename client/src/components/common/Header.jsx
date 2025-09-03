@@ -18,13 +18,13 @@ const Header = ({ onNotificationsClick }) => {
   const { connected, unreadCount } = useSocket();
 
   return (
-    <header className="bg-white border-b border-gray-200 px-6 py-4">
+    <header className="bg-white border-b w-100 border-gray-200 px-6 py-4">
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center justify-center space-x-4">
           <h1 className="text-2xl font-bold text-gray-900">
             Collaborative Notes
           </h1>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-center space-x-2">
             <div className={`h-2 w-2 rounded-full ${connected ? 'bg-green-500' : 'bg-red-500'}`} />
             <span className="text-sm text-gray-500">
               {connected ? 'Connected' : 'Disconnected'}
@@ -56,7 +56,7 @@ const Header = ({ onNotificationsClick }) => {
                 <User className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent className="bg-white" align="end">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem disabled>
