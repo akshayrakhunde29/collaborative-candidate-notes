@@ -1,0 +1,56 @@
+# Ignore node_modules folders
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Ignore build folder
+build/
+
+# Ignore environment files
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# Ignore log files
+*.log
+
+# Ignore logs in specific folders
+client/logs/
+server/logs/
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+
+# Build outputs
+dist/
+build/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.temp
